@@ -63,4 +63,10 @@ dependencies {
 
     //Anko
     implementation "org.jetbrains.anko:anko:$ankoVersion"
+
+    //Koin for Android
+    implementation "org.koin:koin-android:$koinVersion"
+
+    //Koin for viewmodel
+    implementation "org.koin:koin-android-viewmodel:$koinVersion"
 }

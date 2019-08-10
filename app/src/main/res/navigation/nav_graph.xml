@@ -6,7 +6,7 @@
             app:startDestination="@id/ompaListFragment">
     <fragment
             android:id="@+id/ompaListFragment"
-            android:name="com.oriol.oompasmanager.view.ui.OmpaListFragment"
+            android:name="com.oriol.oompasmanager.presentation.ompalist.OmpaListFragment"
             android:label="@string/app_name"
             tools:layout="@layout/fragment_ompa_list">
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
             android:id="@+id/ompaDetailFragment"
-            android:name="com.oriol.oompasmanager.view.ui.OmpaDetailFragment"
+            android:name="com.oriol.oompasmanager.presentation.ompadetail.OmpaDetailFragment"
             android:label="OmpaDetailFragment">
         <argument
                 android:name="id"
