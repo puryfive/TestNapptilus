@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">OompasManager</string>
-    <string name="search_hint">Buscar por profesión</string>
+    <string name="search_hint">Search by profession</string>
 </resources>
