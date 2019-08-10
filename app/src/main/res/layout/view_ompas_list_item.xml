@@ -7,7 +7,7 @@
 
         <variable
                 name="itemData"
-                type="com.oriol.oompasmanager.model.entities.ResultsItem" />
+                type="com.oriol.oompasmanager.domain.model.ResultsItem" />
     </data>
 
     <RelativeLayout
