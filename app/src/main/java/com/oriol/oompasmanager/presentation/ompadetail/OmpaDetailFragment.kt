@@ -1,4 +1,4 @@
-package com.oriol.oompasmanager.view.ui
+package com.oriol.oompasmanager.presentation.ompadetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,17 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import com.oriol.oompasmanager.databinding.FragmentOmpaDetailBinding
+import org.koin.android.ext.android.inject
 
 
 class OmpaDetailFragment : Fragment() {
 
     private lateinit var viewDataBinding: FragmentOmpaDetailBinding
 
+    val ompaListViewModel : OmpaDetailViewModel by inject()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         viewDataBinding = FragmentOmpaDetailBinding.inflate(inflater, container, false).apply {
-            viewmodel = ViewModelProviders.of(this@OmpaDetailFragment).get(OmpaDetailViewModel::class.java)
+            viewmodel = ompaListViewModel
             setLifecycleOwner(viewLifecycleOwner)
         }
         return viewDataBinding.root

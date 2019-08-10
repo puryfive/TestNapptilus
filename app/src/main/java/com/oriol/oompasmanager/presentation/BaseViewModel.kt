@@ -1,4 +1,4 @@
-package com.oriol.oompasmanager.view.ui
+package com.oriol.oompasmanager.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

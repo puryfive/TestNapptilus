@@ -1,4 +1,4 @@
-package com.oriol.oompasmanager.view.adapter
+package com.oriol.oompasmanager.presentation.ompalist
 
 import androidx.core.os.bundleOf
 import androidx.databinding.ViewDataBinding
@@ -6,7 +6,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.oriol.oompasmanager.BR
 import com.oriol.oompasmanager.R
-import com.oriol.oompasmanager.model.entities.ResultsItem
+import com.oriol.oompasmanager.domain.model.ResultsItem
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 

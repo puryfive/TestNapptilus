@@ -1,6 +1,7 @@
-package com.oriol.oompasmanager.model.entities
+package com.oriol.oompasmanager.datasource.model
 
 import com.google.gson.annotations.SerializedName
+import com.oriol.oompasmanager.domain.model.ResultsItem
 
 data class ResponseApi(
 

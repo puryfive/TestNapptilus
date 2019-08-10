@@ -4,7 +4,7 @@
         <import type="android.view.View" />
         <variable
                 name="viewmodel"
-                type="com.oriol.oompasmanager.view.ui.OmpaDetailViewModel" />
+                type="com.oriol.oompasmanager.presentation.ompadetail.OmpaDetailViewModel" />
     </data>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

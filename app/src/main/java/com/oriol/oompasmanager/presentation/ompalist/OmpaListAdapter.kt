@@ -1,11 +1,10 @@
-package com.oriol.oompasmanager.view.adapter
+package com.oriol.oompasmanager.presentation.ompalist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.oriol.oompasmanager.model.entities.ResultsItem
+import com.oriol.oompasmanager.domain.model.ResultsItem
 import com.oriol.oompasmanager.utils.Orders
-import com.oriol.oompasmanager.view.ui.OmpaListViewModel
 
 class OmpaListAdapter : RecyclerView.Adapter<OmpaListViewHolder>() {
     var ompaList: List<ResultsItem?> = emptyList()

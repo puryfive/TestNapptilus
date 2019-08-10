@@ -1,4 +1,4 @@
-package com.oriol.oompasmanager.model.entities
+package com.oriol.oompasmanager.datasource.model
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package com.oriol.oompasmanager.view.ui
+package com.oriol.oompasmanager.presentation.ompalist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,17 +14,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.oriol.oompasmanager.R
 import com.oriol.oompasmanager.databinding.FragmentOmpaListBinding
 import com.oriol.oompasmanager.utils.Orders
-import com.oriol.oompasmanager.view.adapter.OmpaListAdapter
 import kotlinx.android.synthetic.main.fragment_ompa_list.*
+import org.koin.android.ext.android.inject
 
 class OmpaListFragment : Fragment() {
 
     private lateinit var viewDataBinding: FragmentOmpaListBinding
     private lateinit var adapter: OmpaListAdapter
 
+    val ompaListViewModel : OmpaListViewModel by inject()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         viewDataBinding = FragmentOmpaListBinding.inflate(inflater, container, false).apply {
-            viewmodel = ViewModelProviders.of(this@OmpaListFragment).get(OmpaListViewModel::class.java)
+            viewmodel = ompaListViewModel
             setLifecycleOwner(viewLifecycleOwner)
         }
         setHasOptionsMenu(true)
