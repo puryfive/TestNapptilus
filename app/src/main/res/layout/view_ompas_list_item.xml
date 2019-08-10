@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+                name="itemData"
+                type="com.oriol.oompasmanager.model.entities.ResultsItem" />
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20dp">
+
+        <LinearLayout
+                android:id="@+id/item_header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@{itemData.firstName}"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_20sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_header_container"
+            android:text="@{itemData.profession}"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_16sp" />
+
+        <TextView
+                android:id="@+id/item_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_language"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginBottom="@dimen/_10dp"
+                android:text="@{itemData.gender}"
+                android:textSize="@dimen/_16sp" />
+
+        <LinearLayout
+                android:id="@+id/item_star_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_description"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_star_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5dp"
+                android:text="@{itemData.email}"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
