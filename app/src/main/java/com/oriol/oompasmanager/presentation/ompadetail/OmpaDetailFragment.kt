@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.oriol.oompasmanager.databinding.FragmentOmpaDetailBinding
 import org.koin.android.ext.android.inject
@@ -35,13 +34,9 @@ class OmpaDetailFragment : Fragment() {
     }
 
     override fun onPrepareOptionsMenu(menu: Menu) {
-        menu.findItem(com.oriol.oompasmanager.R.id.sortProfessionBtn).setVisible(false)
-        menu.findItem(com.oriol.oompasmanager.R.id.sortGenderBtn).setVisible(false)
-        menu.findItem(com.oriol.oompasmanager.R.id.sortProfessionAndGenderBtn).setVisible(false)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        (activity as AppCompatActivity).supportActionBar!!.setDisplayShowTitleEnabled(false)
+        menu.findItem(com.oriol.oompasmanager.R.id.filterByFemale).setVisible(false)
+        menu.findItem(com.oriol.oompasmanager.R.id.filterByMale).setVisible(false)
+        menu.findItem(com.oriol.oompasmanager.R.id.filterByMaleAndFemale).setVisible(false)
+        menu.findItem(com.oriol.oompasmanager.R.id.action_search).setVisible(false)
     }
 }

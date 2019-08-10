@@ -5,22 +5,20 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.oriol.oompasmanager.R
 import com.oriol.oompasmanager.databinding.FragmentOmpaListBinding
-import com.oriol.oompasmanager.utils.Orders
+import com.oriol.oompasmanager.utils.FilterBy
 import kotlinx.android.synthetic.main.fragment_ompa_list.*
 import org.koin.android.ext.android.inject
 
 class OmpaListFragment : Fragment() {
 
     private lateinit var viewDataBinding: FragmentOmpaListBinding
-    private lateinit var adapter: OmpaListAdapter
+    lateinit var adapter: OmpaListAdapter
 
     val ompaListViewModel : OmpaListViewModel by inject()
 
@@ -59,18 +57,18 @@ class OmpaListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        R.id.sortGenderBtn -> {
-            orderList(Orders.GENDER)
+        R.id.filterByFemale -> {
+            filterList(FilterBy.F)
             true
         }
 
-        R.id.sortProfessionBtn -> {
-            orderList(Orders.PROFESSION)
+        R.id.filterByMale -> {
+            filterList(FilterBy.M)
             true
         }
 
-        R.id.sortProfessionAndGenderBtn -> {
-            orderList(Orders.GENDERANDPROFESSION)
+        R.id.filterByMaleAndFemale -> {
+            filterList(FilterBy.MF)
             true
         }
 
@@ -79,12 +77,7 @@ class OmpaListFragment : Fragment() {
         }
     }
 
-    fun orderList(order: Orders){
-        adapter.orderList(order)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        (activity as AppCompatActivity).supportActionBar!!.setDisplayShowTitleEnabled(true)
+    fun filterList(filterBy: FilterBy){
+        adapter.filterList(filterBy)
     }
 }
