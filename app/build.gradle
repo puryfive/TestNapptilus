@@ -69,4 +69,7 @@ dependencies {
 
     //Koin for viewmodel
     implementation "org.koin:koin-android-viewmodel:$koinVersion"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
 }

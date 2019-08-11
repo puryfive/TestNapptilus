@@ -92,8 +92,7 @@ class OmpaListAdapter : RecyclerView.Adapter<OmpaListViewHolder>(), Filterable {
                 } else {
                     val filteredList = ArrayList<ResultsItem>()
                     for (row in ompaListSearchList) {
-                        if (row?.profession!!.toLowerCase().contains(charString.toLowerCase())
-                         || row.gender!!.contains(charSequence)) {
+                        if (row?.profession!!.toLowerCase().startsWith(charString.toLowerCase())) {
                             filteredList.add(row)
                         }
                     }
