@@ -11,7 +11,9 @@
             tools:layout="@layout/fragment_ompa_list">
         <action
                 android:id="@+id/action_ompaListFragment_to_ompaDetailFragment"
-                app:destination="@id/ompaDetailFragment" />
+                app:destination="@id/ompaDetailFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
     </fragment>
     <fragment
             android:id="@+id/ompaDetailFragment"
