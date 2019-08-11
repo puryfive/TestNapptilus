@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">OompasManager</string>
     <string name="search_hint">Search by profession</string>
+    <string name="gender">Gender: </string>
+    <string name="profession">Profession:</string>
+    <string name="years">Years</string>
 </resources>
