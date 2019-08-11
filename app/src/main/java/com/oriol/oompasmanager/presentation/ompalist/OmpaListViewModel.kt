@@ -17,7 +17,7 @@ class OmpaListViewModel constructor(private val getOmpaListUseCase: GetOmpaListU
                 ompaListLive.value =  response?.results
                 empty.value = false
             } else {
-                empty.value = true
+                empty.value = ompaListLive.value.isNullOrEmpty()
             }
         }
     }
