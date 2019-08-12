@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/action_search"
+            android:title=""
+            android:iconTint="@color/colorAccent"
+            app:showAsAction="always"
+            app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <item
+            android:id="@+id/spinner_page"
+            android:title="@string/page"
+            app:actionViewClass="android.widget.Spinner"
+            android:background="@color/colorPrimaryDark"
+            app:showAsAction="always" />
+
+    <item
+        android:id="@+id/filterByFemale"
+        android:title=""
+        app:showAsAction="always"
+        android:icon="@drawable/ic_female"/>
+
+    <item
+            android:id="@+id/filterByMaleAndFemale"
+            android:title=""
+            app:showAsAction="always"
+            android:icon="@drawable/ic_gender"/>
+
+    <item
+            android:id="@+id/filterByMale"
+            android:title=""
+            app:showAsAction="always"
+            android:icon="@drawable/ic_male"/>
+</menu>
