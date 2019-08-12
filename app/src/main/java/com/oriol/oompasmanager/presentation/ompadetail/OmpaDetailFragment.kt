@@ -57,5 +57,6 @@ class OmpaDetailFragment : Fragment() {
         menu.findItem(R.id.filterByMale).setVisible(false)
         menu.findItem(R.id.filterByMaleAndFemale).setVisible(false)
         menu.findItem(R.id.action_search).setVisible(false)
+        menu.findItem(R.id.spinner_page).setVisible(false)
     }
 }

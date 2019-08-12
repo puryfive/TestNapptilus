@@ -10,8 +10,8 @@ class GetOmpaListDataSourceImpl constructor(
     private val api: ListApi
 ) : GetOmpaListDataSource {
 
-    override fun getOmpaList(onResult: (isSuccess: Boolean, responseApi: ResponseApi?) -> Unit) {
-        api.getOmpas().enqueue(object : Callback<ResponseApi> {
+    override fun getOmpaList(page:Int, onResult: (isSuccess: Boolean, responseApi: ResponseApi?) -> Unit) {
+        api.getOmpas(page).enqueue(object : Callback<ResponseApi> {
             override fun onResponse(call: Call<ResponseApi>?, response: Response<ResponseApi>?) {
                 if (response != null && response.isSuccessful)
                     onResult(true, response.body()!!)
